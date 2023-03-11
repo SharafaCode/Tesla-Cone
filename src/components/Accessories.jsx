@@ -1,20 +1,21 @@
 import React from 'react';
 import arrowDown from '../assets/down-arrow.svg';
 import Fade from 'react-reveal/Fade';
+import Footer from './Footer';
 
 
 const Accessories = () => {
   return (
-    <section className='w-full h-screen accessories'>
+    <section className='w-full h-screen accessories scroll-pb-96'>
         <article className='w-mb_width m-auto'>
-            <Fade>
+            {/* <Fade bottom> */}
 
                 <div className='grid gap-48 place-items-center justify-center min-h-screen grid-flow-row'>
                     <div className='text-center'>
-                    <h1 className='text-lg font-font_semiMedium tracking-wide'>
+                    <h1 className='text-xl font-font_semiMedium tracking-wide'>
                     Accessories
                     </h1>
-                    <p className='hidden text-sm text-text_color font-font_medium'>
+                    <p className='hidden text-base text-text_color font-font_medium'>
                         Lowest Cost Solar Panels in America
                     </p>
                     </div>
@@ -34,8 +35,12 @@ const Accessories = () => {
                     </div>
                 </div>
                 
-            </Fade>
+            {/* </Fade> */}
         </article>
+        {/* <div className='sm:-mt-20'>
+        <Footer/>
+
+        </div> */}
         
     </section>
   )

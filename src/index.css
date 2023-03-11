@@ -16,6 +16,10 @@
   outline: none;
 }
 
+:focus{
+  outline: none;
+}
+
 
 html{
   scroll-behavior: smooth;
@@ -28,6 +32,7 @@ body{
  
 }
 
+/**********SNAP SCROLL SET-UP**********/
 
 .containers{
   
@@ -35,20 +40,27 @@ body{
   overscroll-behavior-inline: contain;
   overflow-y: scroll;
   height: 100vh;
-  transition: all .6s ease-in-out;
+  transition: all .6s linear;
+ 
   
 }
 
-section{
+
+
+section,footer{
   scroll-snap-align: start;
   height: 100vh;
-  transition: all .6s ease-in-out;
- 
+  transition: all .6s linear;
+
+
+
+
 }
 
-:focus{
-  outline: none;
-}
+/**********SNAP SCROLL SET-UP**********/
+
+
+/**********ARROW BUTTON ANIMATION**********/
 
 #arow-down-animate{
   animation:slide-arrow-down-up infinite 1.5s;
@@ -70,6 +82,12 @@ section{
   
   }
 }
+
+/**********ARROW BUTTON ANIMATION**********/
+
+
+
+/**********SECTION BACKGROUND IMAGE**********/
 
 .modelY{
   background-image: url('../src/assets/model-y.jpg');
@@ -121,6 +139,103 @@ section{
 
 }
 
+/**********SECTION BACKGROUND IMAGE**********/
+
+/**********MOBILE SCREEN CLOSE-BUTTON TRANSITIONS**********/
+
+#closeBtnTransitions{
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  padding: .4rem;
+  cursor: pointer;
+
+}
+
+#closeBtnTransitions::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all .6s ease-in-out;
+  border-radius: .4rem;
+  z-index: -100;
+  
+}
+
+#closeBtnTransitions:hover:after{
+  background: rgba(129, 129, 129, 0.205);
+  backdrop-filter: blur(1px);
+  transition: all .6s ease-in-out;
+
+}
+
+
+
+.navSlideFixed{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width:31.2rem;
+  height: 100vh;
+  background: #fff;
+  transform: translateX(100%);
+  transition: all .6s ease-in-out;
+    
+  
+
+}
+
+.animateSlideInOut{
+  transform: translateX(0%);
+ 
+}
+
+/**********MOBILE SCREEN CLOSE-BUTTON TRANSITIONS**********/
+
+/**********MOBILE SCREEN NAV-LINKS TRANSITIONS**********/
+
+#linksTransitions{
+  position: relative;
+  background: transparent;
+  width: 25rem;
+  padding: .6rem 1.4rem .6rem 1.4rem;
+  cursor: pointer;
+
+}
+
+#linksTransitions::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all .6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  border-radius: .4rem;
+  z-index: -100;
+  
+}
+
+#linksTransitions:hover:after{
+  background: rgba(129, 129, 129, 0.205);
+  backdrop-filter: blur(1px);
+  transition: all .6s ease-in-out;
+
+}
+
+
+/**********MOBILE SCREEN NAV-LINKS TRANSITIONS**********/
+
+
+/**********LARGE SCREEN NAV-LINKS TRANSITION**********/
+
 @media screen and (min-width:1200px) {
 
   #transitions{
@@ -140,32 +255,46 @@ section{
     left: 0;
     right: 0;
     bottom: 0;
-    transition: all .4s cubic-bezier(.29, 1.01, 1, -0.68);
+    transition: all .6s cubic-bezier(0.895, 0.03, 0.685, 0.22);
     border-radius: .4rem;
     z-index: -100;
     
   }
   
   #transitions:hover:after{
-    background: rgba(129, 129, 129, 0.130);
+    background: rgba(129, 129, 129, 0.205);
     padding: .6rem 2rem .6rem 2rem;
     backdrop-filter: blur(1px);
     transition: all .6s ease-in-out;
 
   }
+/**********MOBILE SCREEN NAV-LINKS DISPLAY**********/
 
+  #linksDisplay:nth-of-type(1),
+  #linksDisplay:nth-of-type(2),
+  #linksDisplay:nth-of-type(3),
+  #linksDisplay:nth-of-type(4),
+  #linksDisplay:nth-of-type(5),
+  #linksDisplay:nth-of-type(6),
+  #linksDisplay:nth-of-type(19),
+  #linksDisplay:nth-of-type(20),
+  #linksDisplay:nth-of-type(21){
+   display: none;
+
+  }
+
+/**********MOBILE SCREEN NAV-LINKS DISPLAY**********/
   
 }
+
+/**********LARGE SCREEN NAV-LINKS TRANSITION**********/
 
 .border-b{
   border-bottom: .1rem solid #000;
   
 }
 
-.overflows{
-  overflow-y: hidden;
-  scrollbar-width:none;
+
+.more{
+  color: red;
 }
-
-
-

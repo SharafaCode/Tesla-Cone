@@ -1,5 +1,6 @@
 import React from 'react'
 import Accessories from './Accessories'
+import Footer from './Footer'
 import Header from './Header'
 import Model3 from './Model3'
 import ModelS from './ModelS'
@@ -21,6 +22,9 @@ const Home = () => {
         <SolarPanel/>
         <SolarRoof/>
         <Accessories/>
+        
+          <Footer/>
+        
 
         </div>
   

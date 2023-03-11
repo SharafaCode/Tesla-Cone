@@ -1,4 +1,7 @@
-[
+import arrowRight from '../assets/arrow-right.svg';
+
+
+const carsInfo = [
     {
         "id": 0,
         "title": "Model S",
@@ -91,7 +94,7 @@
     },
     {
         "id": 9,
-        "title": "test Drive",
+        "title": "Demo Drive",
         "description": "Order Online for Touchless Delivery",
         "image": "model-y.jpg",
         "range": "410",
@@ -201,26 +204,19 @@
     },
     {
         "id": 20,
-        "title": "News",
-        "description": "Order Online for Touchless Delivery",
-        "image": "model-y.jpg",
-        "range": "410",
-        "time": "2.05",
-        "topSpeed": "190",
-        "peakPower": "1,040"
-    },
-    {
-        "id": 21,
         "title": "More",
+        "icon": arrowRight,
         "more":[{
 
+            "id":1,
             "cyber": "Cybertruck",
             "road": "Roadster",
             "semi": "Semi",
             "news": "News"
-
             
-
         }]
     }
 ]
+
+
+export default carsInfo
