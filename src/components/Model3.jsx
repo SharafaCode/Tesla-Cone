@@ -1,6 +1,6 @@
 import React from 'react';
 import arrowDown from '../assets/down-arrow.svg';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 import 'animate.css';
 
 const Model3 = () => {

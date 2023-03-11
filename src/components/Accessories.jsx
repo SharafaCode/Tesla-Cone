@@ -1,7 +1,7 @@
 import React from 'react';
 import arrowDown from '../assets/down-arrow.svg';
-import Fade from 'react-reveal/Fade';
-import Footer from './Footer';
+// import Fade from 'react-reveal/Fade';
+// import Footer from './Footer';
 
 
 const Accessories = () => {
